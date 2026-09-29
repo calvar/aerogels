@@ -1,0 +1,20 @@
+# Core scientific stack (also pulled in transitively by rcpgenerator/pyvoro2,
+# pinned here for clarity)
+numpy>=1.23,<2
+matplotlib>=3.10
+pandas>=1.5
+scipy>=1.9
+
+# Voronoi/Laguerre tessellation + 3D visualization (py3Dmol), used by
+# reproduce_paper/tessellation/pyvoro2examples.ipynb
+pyvoro2[viz]==0.8.0
+
+# Notebook execution
+jupyter
+ipykernel
+
+# rcpgenerator (used by reproduce_paper/rand_packing/rcpgen_examples.ipynb)
+# is NOT on PyPI yet and must be built from source with a C++ compiler +
+# CMake. See setup_env.sh, which clones
+# https://github.com/KD-physics/RCPGenerator.git and runs
+# `pip install ./python_code/python` from it.
